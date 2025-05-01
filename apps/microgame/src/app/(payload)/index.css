@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 @plugin "@tailwindcss/typography";
 @plugin "tailwindcss-animate";
 
@@ -14,19 +14,18 @@
   }
 }
 
-/* Terminal font */
-@layer base {
+* Terminal font */ @layer base {
   :root {
     --background: 240 20% 10%;
     --foreground: 0 0% 80%;
-    
+
     --terminal-bg: 240 20% 10%;
-    --terminal-green: 159 99% 47%;      /* #01EC97 */
+    --terminal-green: 159 99% 47%; /* #01EC97 */
     --terminal-light-green: 159 99% 55%;
     --terminal-text: 0 0% 80%;
-    --terminal-red: 352 92% 65%;        /* #F95465 */
-    --terminal-blue: 216 100% 72%;      /* #72A2FF */
-    --terminal-yellow: 60 100% 50%;
+    --terminal-red: 352 92% 65%; /* #F95465 */
+    --terminal-blue: 216 100% 72%; /* #72A2FF */
+    --terminal-yellow: 60 100% 50%; /* #FFFF00 */
   }
 }
 
@@ -39,7 +38,11 @@
   left: 0;
   bottom: 0;
   right: 0;
-  background: linear-gradient(to bottom, rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+  background: linear-gradient(
+    to bottom,
+    rgba(18, 16, 16, 0) 50%,
+    rgba(0, 0, 0, 0.25) 50%
+  );
   background-size: 100% 4px;
   z-index: 2;
   pointer-events: none;
@@ -52,7 +55,7 @@
 }
 
 .terminal-content::-webkit-scrollbar-track {
-  background: #0A0A0A;
+  background: #0a0a0a;
 }
 
 .terminal-content::-webkit-scrollbar-thumb {
@@ -66,8 +69,8 @@
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .terminal-content {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: thin;     /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: thin; /* Firefox */
 }
 
 /* Game canvas styling */
@@ -77,38 +80,69 @@
 }
 
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 
 @keyframes scanline {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(100%); }
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%);
+  }
 }
 
 @keyframes flicker {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.8; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
 }
 
 @keyframes flicker-slow {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.9; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.9;
+  }
 }
 
 @keyframes textGlow {
-  0% { text-shadow: 0 0 4px #01EC97; }
-  100% { text-shadow: 0 0 10px #01EC97; }
+  0% {
+    text-shadow: 0 0 4px #01ec97;
+  }
+  100% {
+    text-shadow: 0 0 10px #01ec97;
+  }
 }
 
 @keyframes textGlow-blue {
-  0% { text-shadow: 0 0 4px #72A2FF; }
-  100% { text-shadow: 0 0 10px #72A2FF; }
+  0% {
+    text-shadow: 0 0 4px #72a2ff;
+  }
+  100% {
+    text-shadow: 0 0 10px #72a2ff;
+  }
 }
 
 @keyframes textGlow-red {
-  0% { text-shadow: 0 0 4px #F95465; }
-  100% { text-shadow: 0 0 10px #F95465; }
+  0% {
+    text-shadow: 0 0 4px #f95465;
+  }
+  100% {
+    text-shadow: 0 0 10px #f95465;
+  }
 }
 
 .animate-cursor-blink {

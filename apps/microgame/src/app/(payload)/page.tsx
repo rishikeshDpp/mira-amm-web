@@ -3,7 +3,6 @@ import { FuelProviderWrapper } from "../../components/Terminal/FuelProviderWrapp
 import Terminal from "../../components/Terminal/Terminal";
 
 import "@/shared/ui/index.css"
-import { queryClient } from "../../lib/queryClient";
 
 export default function Home() {
   return (
