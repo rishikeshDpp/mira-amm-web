@@ -7,6 +7,7 @@ import { handleServerFunctions, RootLayout } from '@payloadcms/next/layouts'
 import React from 'react'
 import { JetBrains_Mono } from 'next/font/google'
 
+
 const jetBrainsMono = JetBrains_Mono({
   subsets: ['latin'],
 })

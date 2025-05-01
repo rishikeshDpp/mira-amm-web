@@ -20,8 +20,8 @@
     "commit": "pnpm cz # Commitizen CLI"
   },
   "dependencies": {
-    "@fuels/connectors": "0.36.0",
-    "@fuels/react": "0.36.0",
+    "@fuels/connectors": "0.40.0",
+    "@fuels/react": "0.40.0",
     "@hookform/resolvers": "^3.10.0",
     "@payloadcms/db-postgres": "^3.35.1",
     "@payloadcms/db-sqlite": "^3.35.1",
@@ -60,7 +60,7 @@
     "clsx": "^2.1.1",
     "cmdk": "^1.1.1",
     "date-fns": "^4.1.0",
-    "fuels": "0.96.1",
+    "fuels": "0.100.3",
     "get-port": "^7.1.0",
     "graphql": "^16.10.0",
     "graphql-request": "^7.1.2",
@@ -74,6 +74,7 @@
     "react-device-detect": "^2.2.3",
     "react-dom": "19.0.0",
     "react-loading-skeleton": "^3.5.0",
+    "react-select": "^5.10.1",
     "react-tooltip": "^5.28.1",
     "reflect-metadata": "^0.1.14",
     "sharp": "^0.33.5",
