@@ -117,7 +117,7 @@ const MiniGame = ({ terminal }: MiniGameProps) => {
 
           {/* Game Instructions */}
           <div className="game-instructions mb-6 bg-black/20 p-3 border-2 border-terminal-green">
-            <p className="text-terminal-green font-bold mb-2 underline">TRADING INSTRUCTIONS:</p>
+            <p className="text-terminal-green font-bold mb-2 underline">GAME INSTRUCTIONS:</p>
             <ul className="space-y-1 ml-4 text-terminal-green font-mono">
               {GAME_INSTRUCTIONS.map((instruction, index) => (
                 <li key={index} className="animate-flicker-slow">
@@ -206,7 +206,7 @@ const MiniGame = ({ terminal }: MiniGameProps) => {
               onClick={handleButtonSubmit}
               className="mt-4 border-2 border-terminal-blue px-4 py-2 font-bold text-terminal-blue hover:bg-terminal-blue hover:text-black animate-pulse"
             >
-              RECORD TRADE IN LEDGER
+              SAVE YOUR HIGH SCORE
             </button>
             <button
               onClick={handleWalletConnection}
@@ -226,7 +226,7 @@ const MiniGame = ({ terminal }: MiniGameProps) => {
             <div className="leaderboard mt-8 border-2 border-terminal-green p-2 bg-black/10">
               <div className="text-terminal-green font-bold mb-2 text-center border-b border-terminal-green pb-2 flex items-center justify-between relative">
                 <div />
-                <p>== TOP TRADERS LEADERBOARD == </p>
+                <p>== TOP PLAYERS LEADERBOARD == </p>
                 <div className="flex items-center">
                   <Input
                     className="h-8 w-48 absolute right-0 border-terminal-green/50 hover:border-terminal-green focus:border-terminal-green focus:ring-0"
@@ -247,7 +247,7 @@ const MiniGame = ({ terminal }: MiniGameProps) => {
                       {entry.wallet}
                     </span>
                   </div>
-                  <span className="text-terminal-green font-bold">${entry.score}</span>
+                  <span className="text-terminal-green font-bold">{entry.score}</span>
                 </div>
               ))}
             </div>
