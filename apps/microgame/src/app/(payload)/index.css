@@ -14,7 +14,8 @@
   }
 }
 
-* Terminal font */ @layer base {
+/* Terminal font */
+@layer base {
   :root {
     --background: 240 20% 10%;
     --foreground: 0 0% 80%;

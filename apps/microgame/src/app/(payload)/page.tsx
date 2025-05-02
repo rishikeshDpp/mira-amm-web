@@ -2,7 +2,7 @@ import QueryProviderWrapper from "../QueryProviderWrapper";
 // import { FuelProviderWrapper } from "../../components/Terminal/FuelProviderWrapper";
 import Terminal from "../../components/Terminal/Terminal";
 
-import "@/shared/ui/index.css"
+import "./index.css";
 
 export default function Home() {
   return (
