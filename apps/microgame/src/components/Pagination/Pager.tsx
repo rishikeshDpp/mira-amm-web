@@ -22,7 +22,7 @@ interface PagerProps {
 
 export const Pager: FC<PagerProps> = ({ totalPages, currentPage, onChange, pageBufferSize }) => {
   const getNumber = (page: number) => (
-    <PaginationItem>
+    <PaginationItem key={page}>
       <PaginationButton
         size="sm"
         variant={currentPage === page ? "terminalGreenOutline" : "terminalGreen"}

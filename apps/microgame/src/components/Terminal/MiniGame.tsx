@@ -22,12 +22,12 @@ const MiniGame = ({ terminal }: MiniGameProps) => {
   const [walletError, setWalletError] = useState('');
   const [searchInput, setSearchInput] = useState("");
 
-  // const { connect, account, disconnect, isConnected, isWalletLoading } = useWeb3React()
+  const { connect, account, disconnect, isConnected, isWalletLoading } = useWeb3React()
 
-  // useEffect(() => {
-  //   if (account) setWalletInput(account)
-  //   else setWalletInput('')
-  // }, [account])
+  useEffect(() => {
+    if (account) setWalletInput(account)
+    else setWalletInput('')
+  }, [account])
 
   // Handle spacebar to start the game
   useEffect(() => {
@@ -96,11 +96,11 @@ const MiniGame = ({ terminal }: MiniGameProps) => {
     }
   };
 
-  // const handleWalletConnection = () => {
-  //   if (isWalletLoading) return;
-  //   if (isConnected) return disconnect();
-  //   return connect();
-  // }
+  const handleWalletConnection = () => {
+    if (isWalletLoading) return;
+    if (isConnected) return disconnect();
+    return connect();
+  }
 
   return (
     <div className="mini-game">
@@ -208,13 +208,13 @@ const MiniGame = ({ terminal }: MiniGameProps) => {
             >
               RECORD TRADE IN LEDGER
             </button>
-            {/* <button
+            <button
               onClick={handleWalletConnection}
               disabled={isWalletLoading}
               className="mt-4 border-2 border-terminal-blue px-4 py-2 font-bold text-terminal-blue hover:bg-terminal-blue hover:text-black animate-pulse"
             >
               {isConnected ? 'DISCONNECT WALLET' : 'CONNECT WALLET'}
-            </button> */}
+            </button>
           </div>
         </div>
       )}

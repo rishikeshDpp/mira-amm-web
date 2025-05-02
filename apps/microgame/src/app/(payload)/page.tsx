@@ -1,5 +1,7 @@
+"use client";
+
 import QueryProviderWrapper from "../QueryProviderWrapper";
-// import { FuelProviderWrapper } from "../../components/Terminal/FuelProviderWrapper";
+import FuelProviderWrapper from "../../components/Terminal/FuelProviderWrapper";
 import Terminal from "../../components/Terminal/Terminal";
 
 import "./index.css";
@@ -7,11 +9,11 @@ import "./index.css";
 export default function Home() {
   return (
     <QueryProviderWrapper>
-      {/* <FuelProviderWrapper> */}
-      <div className="min-h-screen w-full flex items-center justify-center bg-black font-['VT323',monospace]">
-        <Terminal />
-      </div>
-      {/* </FuelProviderWrapper> */}
+      <FuelProviderWrapper>
+        <div className="min-h-screen w-full flex items-center justify-center bg-black font-['VT323',monospace]">
+          <Terminal />
+        </div>
+      </FuelProviderWrapper>
     </QueryProviderWrapper>
   );
 }
