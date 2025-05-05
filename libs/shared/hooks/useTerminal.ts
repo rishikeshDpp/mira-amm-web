@@ -24,7 +24,8 @@ interface TerminalState {
 }
 
 const getLocalStorageHighScore = () => {
-  const highScore = localStorage.getItem("hiScore");
+  const highScore =
+    typeof localStorage !== "undefined" ? localStorage.getItem("hiScore") : 0;
   return highScore ? parseInt(highScore) : 0;
 };
 
