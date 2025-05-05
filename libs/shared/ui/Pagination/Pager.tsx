@@ -1,6 +1,6 @@
 import type { FC, JSX } from "react";
 
-import { PaginationButton, PaginationItem } from "../ui/pagination";
+import { PaginationButton, PaginationItem } from "../pagination";
 import { Breaker } from "./Breaker";
 
 /**

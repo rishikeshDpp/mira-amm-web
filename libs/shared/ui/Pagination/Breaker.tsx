@@ -1,5 +1,5 @@
 import { Select } from "./Select";
-import { Button } from "../ui/button";
+import { Button } from "../button";
 
 const range = (start: number, end: number) => {
   const arr = [];

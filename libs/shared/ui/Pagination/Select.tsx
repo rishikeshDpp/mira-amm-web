@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Select as SelectRoot, SelectContent, SelectGroup, SelectTrigger, SelectItem } from "../ui/select";
+import { Select as SelectRoot, SelectContent, SelectGroup, SelectTrigger, SelectItem } from "../select";
 
 interface SelectProps {
   /** The value of the select */

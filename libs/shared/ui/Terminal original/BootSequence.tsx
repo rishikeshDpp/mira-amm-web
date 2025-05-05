@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ASCII_LOGO, BOOT_MESSAGES } from '../../lib/constants';
 
-const BootSequence = () => {
+export const BootSequence = () => {
   const [visibleMessages, setVisibleMessages] = useState<string[]>([]);
 
   useEffect(() => {
@@ -37,5 +37,3 @@ const BootSequence = () => {
     </div>
   );
 };
-
-export default BootSequence;

@@ -1,11 +1,9 @@
 import { useState, KeyboardEvent, useRef, useEffect } from 'react';
 
-interface PasswordPromptProps {
+export const PasswordPrompt = ({ onSubmit, error }: {
   onSubmit: (password: string) => boolean;
   error: boolean;
-}
-
-const PasswordPrompt = ({ onSubmit, error }: PasswordPromptProps) => {
+}) => {
   const [password, setPassword] = useState('');
   const inputRef = useRef<HTMLInputElement>(null);
   
@@ -45,5 +43,3 @@ const PasswordPrompt = ({ onSubmit, error }: PasswordPromptProps) => {
     </div>
   );
 };
-
-export default PasswordPrompt;

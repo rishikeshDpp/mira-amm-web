@@ -1,5 +1,6 @@
 
-import { FUEL_CONFIG, networks } from "../../lib/fuelProvider";
+
+import { FUEL_CONFIG, networks } from "@/shared/lib/fuelProvider";
 import { FuelProvider } from "@fuels/react";
 import { ReactNode } from "react";
 

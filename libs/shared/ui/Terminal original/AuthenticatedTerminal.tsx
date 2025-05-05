@@ -1,11 +1,7 @@
 import { KeyboardEvent, useState } from 'react';
 import { useEffect, useRef } from 'react';
 
-interface AuthenticatedTerminalProps {
-  terminal: any;
-}
-
-const AuthenticatedTerminal = ({ terminal }: AuthenticatedTerminalProps) => {
+export const AuthenticatedTerminal = ({ terminal }: any) => {
   const { state, commandInputRef, processCommand } = terminal;
   const outputRef = useRef<HTMLDivElement>(null);
   const [commandInput, setCommandInput] = useState('');
@@ -71,5 +67,3 @@ const AuthenticatedTerminal = ({ terminal }: AuthenticatedTerminalProps) => {
     </div>
   );
 };
-
-export default AuthenticatedTerminal;

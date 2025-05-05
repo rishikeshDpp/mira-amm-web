@@ -1,6 +1,6 @@
 import type { FC } from "react";
 
-import { PaginationContent, Pagination as PaginationRoot, PaginationNext, PaginationPrevious } from "../ui/pagination";
+import { PaginationContent, Pagination as PaginationRoot, PaginationNext, PaginationPrevious } from "../pagination";
 import { Pager } from "./Pager";
 
 const DEFAULT_PAGE_SIZE = 50;

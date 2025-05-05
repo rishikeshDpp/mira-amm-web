@@ -99,7 +99,7 @@ const GameLauncher: FC<GameLauncherProps> = ({
   }, [ref]);
 
   return (
-    <iframe ref={ref} width={"100%"} height={"525px"} src={`/games/${gameFileName}/index.html`} title={gameFileName} />
+    <iframe ref={ref} width={"100%"} height={"525px"} src={`./games/${gameFileName}/index.html`} title={gameFileName} />
   );
 };
 
