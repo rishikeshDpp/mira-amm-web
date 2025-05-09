@@ -3654,7 +3654,7 @@
                       i,
                       G({
                         x: 128,
-                        y: 224,
+                        y: 200,
                         text: "ENTER TO PLAY AGAIN",
                         color: "#01EC97",
                         align: "center",
