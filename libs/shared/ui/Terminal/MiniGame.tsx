@@ -1,9 +1,9 @@
-import {useState, useEffect} from "react";
-import {GAME_INSTRUCTIONS} from "../../lib/constants";
-import {PaginationContextProvider} from "../Pagination/PaginationContextProvider";
-import {Pagination} from "../Pagination/Pagination";
-import {Input} from "../input";
-import {Game} from "../Game/Game";
+import { useState, useEffect } from "react";
+import { GAME_INSTRUCTIONS } from "../../lib/constants";
+import { PaginationContextProvider } from "../Pagination/PaginationContextProvider";
+import { Pagination } from "../Pagination/Pagination";
+import { Input } from "../input";
+import { Game } from "../Game/Game";
 import useWeb3React from "../../hooks/use-web3-react";
 
 interface MiniGameProps {
@@ -15,15 +15,15 @@ interface LeaderboardEntry {
   score: number;
 }
 
-const MiniGame = ({terminal}: MiniGameProps) => {
-  const {state, startGame, updateGameScore, endGame, submitWalletAddress} =
+const MiniGame = ({ terminal }: MiniGameProps) => {
+  const { state, startGame, updateGameScore, endGame, submitWalletAddress } =
     terminal;
   const [walletInput, setWalletInput] = useState("");
   const [showWalletInput, setShowWalletInput] = useState(false);
   const [walletError, setWalletError] = useState("");
   const [searchInput, setSearchInput] = useState("");
 
-  const {connect, account, disconnect, isConnected, isWalletLoading} =
+  const { connect, account, disconnect, isConnected, isWalletLoading } =
     useWeb3React();
 
   useEffect(() => {
@@ -127,7 +127,7 @@ const MiniGame = ({terminal}: MiniGameProps) => {
       {showWalletInput && (
         <div className="wallet-input mt-8 border-2 border-terminal-blue p-4 bg-black/20">
           <p className="text-terminal-red font-bold mb-2 animate-pulse">
-            EXCEPTIONAL GAMINIG PERFORMANCE! ENTER YOUR T-REX WALLET:
+            EXCEPTIONAL GAMING PERFORMANCE! ENTER YOUR T-REX WALLET:
           </p>
           <div className="flex items-center">
             <span className="text-terminal-blue font-bold mr-2">
@@ -148,17 +148,17 @@ const MiniGame = ({terminal}: MiniGameProps) => {
           )}
           <div className="flex justify-between">
             <button
+              onClick={handleWalletConnection}
+              disabled={isWalletLoading}
+              className="mt-4 bg-black border-2 border-terminal-blue px-4 py-2 font-bold text-terminal-blue hover:bg-terminal-blue hover:text-black animate-pulse cursor-pointer"
+            >
+              {isConnected ? "DISCONNECT WALLET" : "CONNECT WALLET"}
+            </button>
+            <button
               onClick={handleButtonSubmit}
               className="mt-4 bg-terminal-blue border-2 border-terminal-blue px-4 py-2 font-bold text-black hover:bg-black hover:text-terminal-blue animate-pulse cursor-pointer"
             >
               SAVE YOUR HIGH SCORE
-            </button>
-            <button
-              onClick={handleWalletConnection}
-              disabled={isWalletLoading}
-              className="mt-4 bg-terminal-blue border-2 border-terminal-blue px-4 py-2 font-bold text-black hover:bg-black hover:text-terminal-blue animate-pulse cursor-pointer"
-            >
-              {isConnected ? "DISCONNECT WALLET" : "CONNECT WALLET"}
             </button>
           </div>
         </div>
@@ -167,10 +167,10 @@ const MiniGame = ({terminal}: MiniGameProps) => {
       {/* Leaderboard - 80s Highscore Table */}
       <PaginationContextProvider
         initialPage={1}
-        fetchData={async () => {}}
+        fetchData={async () => { }}
         pageSize={50}
       >
-        {({currentPage, setCurrentPage}) => (
+        {({ currentPage, setCurrentPage }) => (
           <>
             <div className="leaderboard mt-8 border-2 border-terminal-green p-2 bg-black/10">
               <div className="text-terminal-green font-bold mb-2 text-center border-b border-terminal-green pb-2 flex items-center justify-between relative">
