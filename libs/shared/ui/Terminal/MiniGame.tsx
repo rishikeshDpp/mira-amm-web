@@ -150,17 +150,17 @@ const MiniGame = ({ terminal }: MiniGameProps) => {
           )}
           <div className="flex justify-between">
             <button
+              onClick={handleWalletConnection}
+              disabled={isWalletLoading}
+              className="mt-4 bg-black border-2 border-terminal-blue px-4 py-2 font-bold text-terminal-blue hover:bg-terminal-blue hover:text-black animate-pulse cursor-pointer"
+            >
+              {isConnected ? "DISCONNECT WALLET" : "CONNECT WALLET"}
+            </button>
+            <button
               onClick={handleButtonSubmit}
               className="mt-4 bg-terminal-blue border-2 border-terminal-blue px-4 py-2 font-bold text-black hover:bg-black hover:text-terminal-blue animate-pulse cursor-pointer"
             >
               SAVE YOUR HIGH SCORE
-            </button>
-            <button
-              onClick={handleWalletConnection}
-              disabled={isWalletLoading}
-              className="mt-4 bg-terminal-blue border-2 border-terminal-blue px-4 py-2 font-bold text-black hover:bg-black hover:text-terminal-blue animate-pulse cursor-pointer"
-            >
-              {isConnected ? "DISCONNECT WALLET" : "CONNECT WALLET"}
             </button>
           </div>
         </div>
